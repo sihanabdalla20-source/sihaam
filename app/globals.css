@@ -1,0 +1,307 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --nav-height: 5.25rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-teal-200 text-navy-950;
+  }
+
+  :focus-visible {
+    outline: 2px solid #20a39f;
+    outline-offset: 4px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    @apply select-none;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-[0.68rem] font-bold uppercase tracking-[0.27em] text-teal-700;
+  }
+
+  .eyebrow-light {
+    @apply text-teal-200;
+  }
+
+  .eyebrow-line::before {
+    content: "";
+    @apply h-px w-8 bg-current opacity-60;
+  }
+
+  .display {
+    @apply font-display font-medium tracking-[-0.025em];
+  }
+
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full px-6 py-3 text-sm font-semibold tracking-[0.01em] transition-all duration-300 ease-smooth;
+  }
+
+  .btn svg {
+    @apply transition-transform duration-300 ease-smooth;
+  }
+
+  .btn:hover svg {
+    @apply translate-x-0.5;
+  }
+
+  .btn-primary {
+    @apply btn bg-teal-500 text-white shadow-[0_12px_30px_-12px_rgba(32,163,159,0.65)] hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-[0_18px_36px_-14px_rgba(32,163,159,0.7)];
+  }
+
+  .btn-dark {
+    @apply btn bg-navy-900 text-white shadow-soft hover:-translate-y-0.5 hover:bg-navy-800;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold text-navy-950 shadow-[0_12px_30px_-12px_rgba(198,161,91,0.6)] hover:-translate-y-0.5 hover:bg-[#d2af68];
+  }
+
+  .btn-light {
+    @apply btn bg-white text-navy-900 shadow-soft hover:-translate-y-0.5 hover:bg-sand-50;
+  }
+
+  .btn-outline-light {
+    @apply btn border border-white/45 bg-white/5 text-white backdrop-blur-sm hover:-translate-y-0.5 hover:border-white/75 hover:bg-white/15;
+  }
+
+  .btn-outline {
+    @apply btn border border-navy-900/20 bg-transparent text-navy-900 hover:-translate-y-0.5 hover:border-navy-900 hover:bg-navy-900 hover:text-white;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-navy-900 transition-colors duration-300 hover:text-teal-700;
+  }
+
+  .text-link svg {
+    @apply transition-transform duration-300 ease-smooth;
+  }
+
+  .text-link:hover svg {
+    @apply translate-x-1;
+  }
+
+  .field-label {
+    @apply mb-2 block text-[0.78rem] font-bold uppercase tracking-[0.16em] text-navy-800;
+  }
+
+  .field {
+    @apply w-full min-w-0 rounded-2xl border border-navy-900/15 bg-white px-4 py-3.5 text-[0.95rem] text-ink shadow-[0_1px_0_rgba(255,255,255,0.7)_inset] transition duration-200 placeholder:text-navy-900/35 hover:border-navy-900/30 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10;
+  }
+
+  .field-error {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-500/10;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .image-zoom {
+    @apply transition-transform duration-700 ease-smooth;
+  }
+
+  .group:hover .image-zoom {
+    transform: scale(1.045);
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-navy-900/10 bg-white/90 px-3 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-navy-800 backdrop-blur-sm;
+  }
+
+  .soft-grid {
+    background-image:
+      linear-gradient(rgba(13, 47, 58, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(13, 47, 58, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-veil {
+    background:
+      linear-gradient(90deg, rgba(7, 31, 40, 0.84) 0%, rgba(7, 31, 40, 0.56) 42%, rgba(7, 31, 40, 0.12) 76%),
+      linear-gradient(0deg, rgba(7, 31, 40, 0.6) 0%, transparent 38%, rgba(7, 31, 40, 0.18) 100%);
+  }
+
+  .page-veil {
+    background:
+      linear-gradient(90deg, rgba(7, 31, 40, 0.88) 0%, rgba(7, 31, 40, 0.67) 56%, rgba(7, 31, 40, 0.46) 100%),
+      linear-gradient(0deg, rgba(7, 31, 40, 0.55) 0%, transparent 55%);
+  }
+
+  .cta-veil {
+    background:
+      linear-gradient(105deg, rgba(7, 31, 40, 0.94) 0%, rgba(7, 31, 40, 0.82) 46%, rgba(7, 31, 40, 0.38) 100%);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(18px);
+  }
+}
+
+/* Scroll-reveal animation, progressively enhanced by the Reveal component. */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-copy > * {
+  animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-copy > *:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.hero-copy > *:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.hero-copy > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.hero-copy > *:nth-child(4) {
+  animation-delay: 0.42s;
+}
+
+.hero-copy > *:nth-child(5) {
+  animation-delay: 0.54s;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.015);
+  }
+  to {
+    transform: scale(1.075);
+  }
+}
+
+.hero-image {
+  animation: slow-zoom 22s ease-out both;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-in {
+  animation: modal-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.25s ease-out both;
+}
+
+/* Map iframe — keeps the map in the brand's muted palette. */
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: saturate(0.72) contrast(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
