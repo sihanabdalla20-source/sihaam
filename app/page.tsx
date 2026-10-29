@@ -121,7 +121,7 @@ export default function HomePage() {
               Curated journeys · East Africa &amp; beyond
             </p>
             <h1 className="display mt-7 text-[clamp(3.25rem,7.4vw,6.5rem)] leading-[0.95] text-white">
-              Discover the World with{" "}
+              Dunida La Soo{" "}
               <span className="block italic text-gold">Siham Tours.</span>
             </h1>
             <p className="mt-7 max-w-xl text-[1rem] leading-8 text-white/72 sm:text-[1.06rem]">
@@ -130,10 +130,10 @@ export default function HomePage() {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="/products" variant="primary" showArrow>
-                Explore Tours
+                Sahami Safarada
               </Button>
               <Button href="/contact" variant="outline-light" showArrow>
-                Contact Us
+                Nala Soo Xiriir
               </Button>
             </div>
             <ul className="mt-11 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-6 text-[0.67rem] font-semibold uppercase tracking-[0.11em] text-white/48">

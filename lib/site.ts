@@ -4,10 +4,10 @@ export type NavItem = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
-  { label: "Contact", href: "/contact" },
+  { label: "Bogga Hore", href: "/" },
+  { label: "Nagu Saabsan", href: "/about" },
+  { label: "Safarada", href: "/products" },
+  { label: "Xiriir", href: "/contact" },
 ];
 
 /**
@@ -18,9 +18,9 @@ export const navItems: NavItem[] = [
 export const siteConfig = {
   name: "Siham Tours",
   wordmark: "SIHAM",
-  tagline: "Journeys made personal.",
+  tagline: "Safarro shakhsi ahaan loo qorsheeyay.",
   description:
-    "Thoughtfully planned tours to remarkable places, with local knowledge, beautiful stays and care in every detail.",
+    "Safarro si taxadar leh loo qorsheeyay, aqoonta deegaanka, hoy wanaagsan iyo daryeel buuxa leh.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sihamtours.example",
   contact: {
     phone: {
